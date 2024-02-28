@@ -103,7 +103,7 @@ buttonHard.addEventListener("click", () => {
 });
 
 buttonBack.addEventListener("click", () => {
-  location.href = "../../main_page/index.html";
+  location.href = "../../index.html";
 });
 
 function levelPicked() {
@@ -157,7 +157,7 @@ function setDiff() {
 //HANDLING BOTTOM BUTTONS
 
 buttonHome.addEventListener("click", () => {
-  location.href = "../../main_page/index.html";
+  location.href = "../../index.html";
 });
 
 buttonStop.addEventListener("click", () => {
@@ -208,7 +208,7 @@ function updateTime() {
 //HANDLING GRATULATION BUTTONS
 
 gratulationsHomeButton.addEventListener("click", () => {
-  location.href = "../../main_page/index.html";
+  location.href = "../../index.html";
 });
 
 gratulationsPlayAgainButton.addEventListener("click", () => {
