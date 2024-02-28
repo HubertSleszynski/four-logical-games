@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puzzle Slider</title>
+    <link rel="stylesheet" href="puzzle-style.css" />
+    <script src="puzzle-app.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Puzzle Slider</h1>
+    </header>
+    <main id="main">
+      <div class="container hide">
+        <table id="table" class="table">
+          <tr>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell medium" onclick="cellClick(this)"></td>
+            <td class="cell hard" onclick="cellClick(this)"></td>
+          </tr>
+          <tr>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell medium" onclick="cellClick(this)"></td>
+            <td class="cell hard" onclick="cellClick(this)"></td>
+          </tr>
+          <tr>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell medium" onclick="cellClick(this)"></td>
+            <td class="cell hard" onclick="cellClick(this)"></td>
+          </tr>
+          <tr class="medium">
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell hard" onclick="cellClick(this)"></td>
+          </tr>
+          <tr class="hard">
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+            <td class="cell" onclick="cellClick(this)"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="buttons hide">
+        <button type="button" id="btnHome">Menu</button>
+        <button type="button" id="btnStop">Stop</button>
+        <button type="button" id="btnReset">Reset</button>
+        <div class="timer">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </div>
+      </div>
+      <div class="gratulations hide">
+        <p>Gratulacje!</p>
+        <div class="gratulations__time">
+          <p>Twój Czas</p>
+          <div class="gratulations__timers">
+            <span id="yourTimeMinutes">00</span>
+            <span>:</span>
+            <span id="yourTimeSeconds">00</span>
+          </div>
+        </div>
+        <div class="gratulations__buttons">
+          <button type="button" id="home">Strona Startowa</button>
+          <button type="button" id="playAgain">Zagraj Ponownie</button>
+        </div>
+      </div>
+      <div class="level show" id="levelPick">
+        <div class="level__buttons">
+          <button type="button" id="btnEasy">Łatwy</button>
+          <button type="button" id="btnMedium">Średni</button>
+          <button type="button" id="btnHard">Trudny</button>
+        </div>
+        <button type="button" id="btnBack">Powrót</button>
+      </div>
+    </main>
+  </body>
+</html>

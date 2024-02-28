@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="sudoku.css" />
+    <script src="sudoku.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Sudoku</h1>
+    </header>
+    <main id="main">
+      <div class="container hide">
+        <div class="digits">
+          <div class="number">1</div>
+          <div class="number">2</div>
+          <div class="number">3</div>
+          <div class="number">4</div>
+          <div class="number">5</div>
+        </div>
+        <div class="board">
+          <div id="0" class="square"></div>
+          <div id="1" class="square"></div>
+          <div id="2" class="v-line square"></div>
+          <div id="3" class="square"></div>
+          <div id="4" class="square"></div>
+          <div id="5" class="v-line square"></div>
+          <div id="6" class="square"></div>
+          <div id="7" class="square"></div>
+          <div id="8" class="square"></div>
+          <div id="9" class="square"></div>
+          <div id="10" class="square"></div>
+          <div id="11" class="v-line square"></div>
+          <div id="12" class="square"></div>
+          <div id="13" class="square"></div>
+          <div id="14" class="v-line square"></div>
+          <div id="15" class="square"></div>
+          <div id="16" class="square"></div>
+          <div id="17" class="square"></div>
+          <div id="18" class="h-line square"></div>
+          <div id="19" class="h-line square"></div>
+          <div id="20" class="h-line v-line square"></div>
+          <div id="21" class="h-line square"></div>
+          <div id="22" class="h-line square"></div>
+          <div id="23" class="h-line v-line square"></div>
+          <div id="24" class="h-line square"></div>
+          <div id="25" class="h-line square"></div>
+          <div id="26" class="h-line square"></div>
+          <div id="27" class="square"></div>
+          <div id="28" class="square"></div>
+          <div id="29" class="v-line square"></div>
+          <div id="30" class="square"></div>
+          <div id="31" class="square"></div>
+          <div id="32" class="v-line square"></div>
+          <div id="33" class="square"></div>
+          <div id="34" class="square"></div>
+          <div id="35" class="square"></div>
+          <div id="36" class="square"></div>
+          <div id="37" class="square"></div>
+          <div id="38" class="v-line square"></div>
+          <div id="39" class="square"></div>
+          <div id="40" class="square"></div>
+          <div id="41" class="v-line square"></div>
+          <div id="42" class="square"></div>
+          <div id="43" class="square"></div>
+          <div id="44" class="square"></div>
+          <div id="45" class="h-line square"></div>
+          <div id="46" class="h-line square"></div>
+          <div id="47" class="h-line v-line square"></div>
+          <div id="48" class="h-line square"></div>
+          <div id="49" class="h-line square"></div>
+          <div id="50" class="h-line v-line square"></div>
+          <div id="51" class="h-line square"></div>
+          <div id="52" class="h-line square"></div>
+          <div id="53" class="h-line square"></div>
+          <div id="54" class="square"></div>
+          <div id="55" class="square"></div>
+          <div id="56" class="v-line square"></div>
+          <div id="57" class="square"></div>
+          <div id="58" class="square"></div>
+          <div id="59" class="v-line square"></div>
+          <div id="60" class="square"></div>
+          <div id="61" class="square"></div>
+          <div id="62" class="square"></div>
+          <div id="63" class="square"></div>
+          <div id="64" class="square"></div>
+          <div id="65" class="v-line square"></div>
+          <div id="66" class="square"></div>
+          <div id="67" class="square"></div>
+          <div id="68" class="v-line square"></div>
+          <div id="69" class="square"></div>
+          <div id="70" class="square"></div>
+          <div id="71" class="square"></div>
+          <div id="72" class="square"></div>
+          <div id="73" class="square"></div>
+          <div id="74" class="v-line square"></div>
+          <div id="75" class="square"></div>
+          <div id="76" class="square"></div>
+          <div id="77" class="v-line square"></div>
+          <div id="78" class="square"></div>
+          <div id="79" class="square"></div>
+          <div id="80" class="square"></div>
+        </div>
+        <div class="digits">
+          <div class="number">6</div>
+          <div class="number">7</div>
+          <div class="number">8</div>
+          <div class="number">9</div>
+          <div class="errors number">0</div>
+        </div>
+      </div>
+      <div class="buttons hide">
+        <button type="button" id="btnHome">Menu</button>
+        <button type="button" id="btnStop">Stop</button>
+        <button type="button" id="btnReset">Reset</button>
+        <div class="timer">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </div>
+      </div>
+      <div class="gratulations hide">
+        <p>Gratulacje!</p>
+        <div class="gratulations__time">
+          <p>Twoj Czas</p>
+          <div class="gratulations__timers">
+            <span id="yourTimeMinutes">00</span>
+            <span>:</span>
+            <span id="yourTimeSeconds">00</span>
+          </div>
+        </div>
+        <div class="gratulations__buttons">
+          <button type="button" id="home">Strona Startowa</button>
+          <button type="button" id="playAgain">Zagraj Ponownie</button>
+        </div>
+      </div>
+      <div class="level show" id="levelPick">
+        <div class="level__buttons">
+          <button type="button" id="btnEasy">Łatwy</button>
+          <button type="button" id="btnMedium">Średni</button>
+          <button type="button" id="btnHard">Trudny</button>
+        </div>
+        <button type="button" id="btnBack">Powrot</button>
+      </div>
+    </main>
+  </body>
+</html>

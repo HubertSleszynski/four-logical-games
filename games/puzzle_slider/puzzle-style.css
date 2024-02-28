@@ -1,0 +1,19 @@
+@import "../../css/resets&variables.css";
+@import "../../css/game_style.css";
+
+.table {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  justify-content: center;
+  align-items: center;
+}
+.cell {
+  width: 20%;
+  height: 20%;
+  border: 1px solid var(--FCOLOR1);
+  border-radius: 0.2rem;
+  text-align: center;
+  cursor: pointer;
+}

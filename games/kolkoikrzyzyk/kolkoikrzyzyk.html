@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolko i krzyzyk</title>
+    <link rel="stylesheet" href="kolkoikrzyzyk.css" />
+    <script type="module" src="kolkoikrzyzyk.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Kółko i krzyżyk</h1>
+    </header>
+    <main id="main">
+      <div class="container hide">
+        <div class="board" id="board">
+          <div class="square" value="0" data-square></div>
+          <div class="square" value="1" data-square></div>
+          <div class="square" value="2" data-square></div>
+          <div class="square" value="3" data-square></div>
+          <div class="square" value="4" data-square></div>
+          <div class="square" value="5" data-square></div>
+          <div class="square" value="6" data-square></div>
+          <div class="square" value="7" data-square></div>
+          <div class="square" value="8" data-square></div>
+          <div class="square" value="9" data-square></div>
+          <div class="square" value="10" data-square></div>
+          <div class="square" value="11" data-square></div>
+          <div class="square" value="12" data-square></div>
+          <div class="square" value="13" data-square></div>
+          <div class="square" value="14" data-square></div>
+          <div class="square" value="15" data-square></div>
+          <div class="square" value="16" data-square></div>
+          <div class="square" value="17" data-square></div>
+          <div class="square" value="18" data-square></div>
+          <div class="square" value="19" data-square></div>
+          <div class="square" value="20" data-square></div>
+          <div class="square" value="21" data-square></div>
+          <div class="square" value="22" data-square></div>
+          <div class="square" value="23" data-square></div>
+          <div class="square" value="24" data-square></div>
+          <div class="square" value="25" data-square></div>
+          <div class="square" value="26" data-square></div>
+          <div class="square" value="27" data-square></div>
+          <div class="square" value="28" data-square></div>
+          <div class="square" value="29" data-square></div>
+          <div class="square" value="30" data-square></div>
+          <div class="square" value="31" data-square></div>
+          <div class="square" value="32" data-square></div>
+          <div class="square" value="33" data-square></div>
+          <div class="square" value="34" data-square></div>
+          <div class="square" value="35" data-square></div>
+          <div class="square" value="36" data-square></div>
+          <div class="square" value="37" data-square></div>
+          <div class="square" value="38" data-square></div>
+          <div class="square" value="39" data-square></div>
+          <div class="square" value="40" data-square></div>
+          <div class="square" value="41" data-square></div>
+          <div class="square" value="42" data-square></div>
+          <div class="square" value="43" data-square></div>
+          <div class="square" value="44" data-square></div>
+          <div class="square" value="45" data-square></div>
+          <div class="square" value="46" data-square></div>
+          <div class="square" value="47" data-square></div>
+          <div class="square" value="48" data-square></div>
+        </div>
+      </div>
+      <div class="buttons hide">
+        <button type="button" id="btnHome">Menu</button>
+        <button type="button" id="btnStop">Stop</button>
+        <button type="button" id="btnReset">Reset</button>
+        <div class="timer">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </div>
+      </div>
+      <div class="gratulations hide">
+        <p>Gratulacje!</p>
+        <div class="gratulations__winner">
+          <p>Wygrana</p>
+        </div>
+        <div class="gratulations__time">
+          <p>Czas</p>
+          <div class="gratulations__timers">
+            <span id="yourTimeMinutes">00</span>
+            <span>:</span>
+            <span id="yourTimeSeconds">00</span>
+          </div>
+        </div>
+        <div class="gratulations__buttons">
+          <button type="button" id="home">Strona Startowa</button>
+          <button type="button" id="playAgain">Zagraj Ponownie</button>
+        </div>
+      </div>
+      <div class="level show" id="levelPick">
+        <div class="level__buttons">
+          <button type="button" id="btnEasy">Łatwy</button>
+          <button type="button" id="btnMedium">Średni</button>
+          <button type="button" id="btnHard">Trudny</button>
+        </div>
+        <button type="button" id="btnBack">Powrót</button>
+      </div>
+    </main>
+  </body>
+</html>

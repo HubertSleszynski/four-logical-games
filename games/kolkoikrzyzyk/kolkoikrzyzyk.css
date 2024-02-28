@@ -1,0 +1,190 @@
+@import "../../css/resets&variables.css";
+@import "../../css/game_style.css";
+
+.container {
+  justify-content: center;
+  align-items: center;
+}
+.board {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.easy {
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+}
+
+.medium {
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(5, auto);
+}
+
+.hard {
+  grid-template-columns: repeat(7, auto);
+  grid-template-rows: repeat(7, auto);
+}
+
+.square {
+  border: 1px solid var(--FCOLOR1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.small {
+  width: 6.4rem;
+  height: 6.4rem;
+  font-size: 6rem;
+}
+
+.med {
+  width: 9rem;
+  height: 9rem;
+  font-size: 8rem;
+}
+
+.large {
+  width: 15rem;
+  height: 15rem;
+  font-size: 10rem;
+}
+.x {
+  color: red;
+}
+
+.o {
+  color: green;
+}
+
+.gratulations__winner {
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 1700px) {
+  .large {
+    width: 13.5rem;
+    height: 13.5rem;
+    font-size: 12.5rem;
+  }
+
+  .med {
+    width: 7.5rem;
+    height: 7.5rem;
+    font-size: 6.5rem;
+  }
+
+  .small {
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .large {
+    width: 12.5rem;
+    height: 12.5rem;
+    font-size: 11.5rem;
+  }
+
+  .med {
+    width: 7.25rem;
+    height: 7.25rem;
+    font-size: 6.25rem;
+  }
+
+  .small {
+    width: 5rem;
+    height: 5rem;
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .large {
+    width: 11rem;
+    height: 11rem;
+    font-size: 10rem;
+  }
+
+  .med {
+    width: 7rem;
+    height: 7rem;
+    font-size: 6rem;
+  }
+
+  .small {
+    width: 4.75rem;
+    height: 4.75rem;
+    font-size: 3.75rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .large {
+    width: 10rem;
+    height: 10rem;
+    font-size: 9rem;
+  }
+
+  .med {
+    width: 5.75rem;
+    height: 5.75rem;
+    font-size: 4.75rem;
+  }
+
+  .small {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .large {
+    width: 8rem;
+    height: 8rem;
+    font-size: 7rem;
+  }
+
+  .med {
+    width: 5rem;
+    height: 5rem;
+    font-size: 4rem;
+  }
+
+  .small {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .large {
+    width: 6rem;
+    height: 6rem;
+    font-size: 5rem;
+  }
+
+  .med {
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+  }
+
+  .small {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.75rem;
+  }
+
+  .level > button {
+    height: 5rem;
+  }
+}
