@@ -1,4 +1,4 @@
-//OKNRO GRY
+//GAME WINDOW
 
 const gameWindow = document.getElementById("gameWindow");
 
@@ -8,7 +8,7 @@ const headerElement = document.getElementById("header");
 const mainElement = document.getElementById("main");
 const footerElement = document.getElementById("footer");
 
-//GRY
+//GAMES
 
 const memoryContainerElement = document.getElementById("memoryContainer");
 const puzzleContainerElement = document.getElementById("puzzleContainer");
@@ -17,13 +17,13 @@ const kolkoikrzyzykContainerElement = document.getElementById(
 );
 const sudokuContainerElement = document.getElementById("sudokuContainer");
 
-//ELEMENTY OPISUJACE GRY
+//ELEMENTS USED TO DESCRIBE GAMES
 
 const h2Element = document.getElementById("gameWindowH2");
 const descriptionTextElement = document.getElementById("descriptionText");
 const rulesTextElement = document.getElementById("rulesText");
 
-//POJAWIENIE SIE OKNA PO KLIKNIECIU WYBRANEGO KONTENERA
+//WINDOW WILL APPEAR AFTER CLICKING ON THE SELECTED CONTAINER
 
 const gameContainer = document.getElementsByClassName("game-container");
 
@@ -55,34 +55,33 @@ gameWindowBtnPlay.addEventListener("click", () => {
   location.href = gameWindowBtnPlay.value;
 });
 
-//KONTENERY Z GRAMI
+//GAME CONTAINERS
 
 memoryContainerElement.addEventListener("click", () => {
-  gameWindowBtnPlay.value = "/four-logical-games/games/memory/memory.html";
+  gameWindowBtnPlay.value = "four-logical-games/games/memory/memory.html";
   h2Element.innerText = "MEMORY";
   rulesTextElement.innerText =
-    "Celem gry w Memory jest odkrycie i zebranie jak największej liczby pasujących par kart.\n\n Na początku gry, wszystkie karty są poukładane na stole z twarzą do dołu. Gracz podczas swojej tury wybiera najpierw jedną a później drugą kartę, które według niego będą miały ten sam obrazek.Po odkryciu kart, należy sprawdzić, czy obie odkryte karty są pasującymi parami.\n\n Jeśli karty tworzą parę, gracz zabiera je ze stołu i odkłada obok siebie. Następnie kontynuuje swoją turę i wykonuje kolejny ruch. Jeśli karty nie tworzą pary, gracz odkłada je z powrotem na swoje pierwotne miejsce na stole, z twarzą do dołu.Następnie inny gracz wykonuje swój ruch.\n\n Gra kończy się, gdy wszystkie pary zostaną zebrane. Wygrywa gracz, który na koniec gry posiada największą liczbę zebranych par.";
+    "The aim of the Memory game is to uncover and collect as many matching pairs of cards as possible.\n\n At the beginning of the game, all cards are arranged face down on the table. During their turn, a player first selects one card and then another, believing that they have the same image. After revealing the cards, it is necessary to check if both revealed cards form a matching pair.\n\n If the cards make a pair, the player takes them from the table and places them next to each other. They then continue their turn and make another move. If the cards do not form a pair, the player places them back in their original positions on the table, face down. Then, it's the turn of another player to make their move.\n\n The game concludes when all pairs have been collected. The player with the most collected pairs at the end of the game is declared the winner.";
 });
 
 puzzleContainerElement.addEventListener("click", () => {
   gameWindowBtnPlay.value =
-    "/four-logical-games/games/puzzle_slider/puzzle_slider.html";
+    "four-logical-games/games/puzzle_slider/puzzle_slider.html";
   h2Element.innerText = "PUZZLE SLIDER";
   rulesTextElement.innerText =
-    "Puzzle slider to gra logiczna, której celem jest ułożenie fragmentów liczb w zamierzony sposób na kwadratowej planszy.\n\n Plansza składa się z nieruchomych kafelków oraz jednego pustego kafelka, który umożliwia przesuwanie sąsiednich fragmentów. Gracz może wykonywać ruchy, przesuwając kafelki do pustego miejsca, aby stworzyć docelową konfigurację.\n\n Rozgrywka polega na tym, aby poprzez odpowiednie przesuwanie kafelków zrealizować zamierzoną układankę. Im więcej kafelków na planszy, tym trudniejsza łamigłówka, ponieważ liczba możliwych ruchów rośnie, co dodaje wyzwania. ";
+    "Puzzle slider is a logic game where the objective is to arrange number fragments in a deliberate manner on a square board.\n\n The board consists of fixed tiles and one empty tile, allowing the sliding of adjacent fragments. Players can make moves by sliding tiles into the empty space to create the intended configuration.\n\n The gameplay revolves around strategically sliding tiles to achieve the desired puzzle arrangement. The more tiles on the board, the more challenging the puzzle becomes, as the number of possible moves increases, adding complexity to the challenge. ";
 });
 
 kolkoikrzyzykContainerElement.addEventListener("click", () => {
-  gameWindowBtnPlay.value =
-    "/four-logical-games/games/kolkoikrzyzyk/kolkoikrzyzyk.html";
-  h2Element.innerText = "KOLKO I KRZYZYK";
+  gameWindowBtnPlay.value = "four-logical-games/games/tictactoe/tictactoe.html";
+  h2Element.innerText = "TIC TAC TOE";
   rulesTextElement.innerText =
-    "Gra w kółko i krzyżyk jest klasyczną grą dla dwóch graczy, gdzie plansza składa się z siatki o różnych wymiarach.\n\n W wersji 3x3, celem gracza jest ułożenie trzech swoich symboli (X lub O) w rzędzie, zarówno pionowo, poziomo, jak i na skos.\n\n Plansza 5x5 rozszerza tę koncepcję, wymagając ułożenia pięciu symboli w rzędzie. \n\nNatomiast w wersji 7x7 gracze starają się osiągnąć zwycięstwo, ustawiając siedem symboli w jednym ciągu. \n\nRuchy wykonuje się na przemian, umieszczając swój symbol na wolnym polu. Gra kończy się remisem, gdy wszystkie pola są zapełnione, a żaden gracz nie osiągnął zwycięstwa. Linie zwycięstwa mogą być proste (pionowe, poziome, na skos) i obejmować określoną liczbę pól, zazwyczaj 3, 5 lub 7, w zależności od rozmiaru planszy.";
+    "Tic-tac-toe is a classic two-player game where the board consists of a grid of various dimensions.\n\n In the 3x3 version, the player's goal is to align three of their symbols (X or O) either vertically, horizontally, or diagonally.\n\n The 5x5 board expands on this concept, requiring the alignment of five symbols in a row.\n\nMeanwhile, in the 7x7 version, players strive for victory by arranging seven symbols in a consecutive sequence. \n\nMoves are made alternately, placing one's symbol on an empty square. The game ends in a draw when all squares are filled, and no player has achieved victory. Winning lines can be straight (vertical, horizontal, or diagonal) and encompass a specific number of squares, typically 3, 5, or 7, depending on the board size.";
 });
 
 sudokuContainerElement.addEventListener("click", () => {
-  gameWindowBtnPlay.value = "/four-logical-games/games/sudoku/sudoku.html";
+  gameWindowBtnPlay.value = "four-logical-games/games/sudoku/sudoku.html";
   h2Element.innerText = "SUDOKU";
   rulesTextElement.innerText =
-    "Sudoku to gra logiczna, która polega na wypełnianiu siatki 9x9, podzielonej na 9 kwadratów 3x3, liczbami od 1 do 9.\n\n Na początku gry na planszy znajdują się pewne liczby, które są już uzupełnione. Celem gry jest uzupełnienie pozostałych pól w taki sposób, aby każda kolumna, każdy wiersz i każdy kwadrat 3x3 zawierał każdą liczbę od 1 do 9 bez powtórzeń. Podstawową zasadą Sudoku jest to, że w każdym wierszu, kolumnie i kwadracie 3x3 nie można powtarzać tych samych liczb. \n\nGra kończy się, gdy wszystkie pola na planszy są wypełnione i spełniają tę zasadę.";
+    "Sudoku is a logic game in which players aim to fill a 9x9 grid, divided into 9 squares of 3x3, with numbers from 1 to 9.\n\n At the beginning of the game, certain numbers are already filled on the board. The goal of the game is to fill the remaining fields in such a way that each column, each row, and each 3x3 square contains every number from 1 to 9 without repetition. The fundamental rule of Sudoku is that the same numbers cannot be repeated in any row, column, or 3x3 square.\n\nThe game concludes when all the fields on the board are filled, adhering to this rule.";
 });

@@ -274,16 +274,16 @@ function checkForDraw() {
       return;
     }
   }
-  gratulationsWinner.innerText = "Remis";
+  gratulationsWinner.innerText = "Draw";
   endOfTheGame();
 }
 
 function checkWhoWon() {
   if (turnO) {
-    gratulationsWinner.innerText = "Wygrywa O";
+    gratulationsWinner.innerText = "O WINS";
     endOfTheGame();
   } else if (!turnO) {
-    gratulationsWinner.innerText = "Wygrywa X";
+    gratulationsWinner.innerText = "X WINS";
     endOfTheGame();
   }
 }

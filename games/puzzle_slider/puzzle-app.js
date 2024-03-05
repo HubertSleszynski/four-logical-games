@@ -253,7 +253,7 @@ function swapTiles(x1, y1, x2, y2) {
   const temp = puzzle[y1][x1];
   puzzle[y1][x1] = puzzle[y2][x2];
   puzzle[y2][x2] = temp;
-  emptyCell = { x: x1, y: y1 }; // Aktualizacja pozycji pustego pola
+  emptyCell = { x: x1, y: y1 };
 }
 
 function draw() {
@@ -262,26 +262,23 @@ function draw() {
     const x = index % diff;
     const y = Math.floor(index / diff);
     const value = puzzle[y][x];
-    cell.textContent = value !== null ? value : ""; // Użyj '' dla pustego pola
+    cell.textContent = value !== null ? value : "";
     if (value === null) {
-      emptyCell = { x, y }; // Aktualizacja pozycji pustego pola
+      emptyCell = { x, y };
     }
   });
 }
 
 function shuffleFullBoard() {
-  // Tworzenie planszy w taki sposób, aby była zawsze rozwiązywalna
-  let nums = [...Array(usedSquares).keys()].map(x => x + 1); // Od 1 do 15
+  let nums = [...Array(usedSquares).keys()].map(x => x + 1);
   do {
     for (let i = nums.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [nums[i], nums[j]] = [nums[j], nums[i]];
     }
 
-    // Usuń planszę
     puzzle = emptyPuzzle;
 
-    // Wypełnij planszę
     let k = 0;
     for (let i = 0; i < diff; i++) {
       for (let j = 0; j < diff; j++) {
@@ -293,7 +290,6 @@ function shuffleFullBoard() {
   draw();
 }
 
-// Funkcja sprawdzająca, czy plansza jest rozwiązywalna
 function isSolvable(nums) {
   let inversions = 0;
   for (let i = 0; i < nums.length - 1; i++) {
@@ -303,7 +299,6 @@ function isSolvable(nums) {
       }
     }
   }
-  // Plansza jest rozwiązywalna, jeśli liczba inwersji jest parzysta
   return inversions % 2 === 0;
 }
 
