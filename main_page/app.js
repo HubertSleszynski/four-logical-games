@@ -12,9 +12,7 @@ const footerElement = document.getElementById("footer");
 
 const memoryContainerElement = document.getElementById("memoryContainer");
 const puzzleContainerElement = document.getElementById("puzzleContainer");
-const kolkoikrzyzykContainerElement = document.getElementById(
-  "kolkoikrzyzykContainer"
-);
+const tictactoeContainerElement = document.getElementById("tictactoeContainer");
 const sudokuContainerElement = document.getElementById("sudokuContainer");
 
 //ELEMENTS USED TO DESCRIBE GAMES
@@ -72,7 +70,7 @@ puzzleContainerElement.addEventListener("click", () => {
     "Puzzle slider is a logic game where the objective is to arrange number fragments in a deliberate manner on a square board.\n\n The board consists of fixed tiles and one empty tile, allowing the sliding of adjacent fragments. Players can make moves by sliding tiles into the empty space to create the intended configuration.\n\n The gameplay revolves around strategically sliding tiles to achieve the desired puzzle arrangement. The more tiles on the board, the more challenging the puzzle becomes, as the number of possible moves increases, adding complexity to the challenge. ";
 });
 
-kolkoikrzyzykContainerElement.addEventListener("click", () => {
+tictactoeContainerElement.addEventListener("click", () => {
   gameWindowBtnPlay.value = "four-logical-games/games/tictactoe/tictactoe.html";
   h2Element.innerText = "TIC TAC TOE";
   rulesTextElement.innerText =
