@@ -12,7 +12,7 @@ template
 
 ## Tech Stack
 
-Yarn Vite React Tailwind
+Npm Html Css JavaScript
 
 ## Author
 
